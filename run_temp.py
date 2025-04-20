@@ -12,7 +12,7 @@ if __name__ == "__main__":
         "debate_rounds": 5,
         "model": "/mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct",
         "device": "cuda",
-        "episodes": 1,
+        "episodes": 10,
         "base_threshold": 0.0,
         "final_threshold": 0.8,
         "outlier_threshold": 0.5,
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     }
     
     # 初始化日志记录器
-    logger = DebateLogger(log_file="logs/debate_run_20250419_200105.log", params=params)
+    logger = DebateLogger(log_file="logs/debate_run_20250420_085547.log", params=params)
     
     # 确保可用的CUDA内存
     if torch.cuda.is_available():
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     
     print("运行辩论环境...")
     try:
-        run_debate_with_logging(env, episodes=1, logger=logger)
+        run_debate_with_logging(env, episodes=10, logger=logger)
         # 保存结果
         result_file = logger.save_results()
     finally:

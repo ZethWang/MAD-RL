@@ -200,7 +200,10 @@ def clean_repeat_suffix(text: str) -> str:
     return text
 
 def validate_json_response(response):
-    
+    # 清理开头和结尾的 markdown 标记 ```json ... ```
+    if response.strip().startswith("```"):
+        response = response.strip().strip("```json").strip("```").strip()
+
     try:
         result = json.loads(response)
         result["answer"] = "{}".format(parse_answer(result["answer"]) or '')
@@ -212,6 +215,7 @@ def validate_json_response(response):
             "answer": "{}".format(parse_answer(response) or '')
         }
     return result
+
 
 def find_majority(nums):
     counts = {}

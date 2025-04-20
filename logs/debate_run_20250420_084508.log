@@ -1,0 +1,5 @@
+[0;34m[INFO][0m 辩论环境运行开始时间: 2025-04-20 08:45:08
+[0;34m[INFO][0m 欢迎使用辩论环境一键运行脚本 (Qwen2.5-1.5B版本)
+[0;34m[INFO][0m 检查Python依赖...
+[0;31m[ERROR][0m 缺少必要的Python库: gym,sentence_transformers
+[1;33m[WARNING][0m 请安装缺少的库: pip install gym,sentence_transformers
