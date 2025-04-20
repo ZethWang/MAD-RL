@@ -1,0 +1,207 @@
+{
+  "parameters": {
+    "agents": 3,
+    "debate_rounds": 3,
+    "model": "/mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct",
+    "device": "cuda",
+    "episodes": 1,
+    "base_threshold": 0.0,
+    "final_threshold": 0.8,
+    "outlier_threshold": 0.5,
+    "min_weight": 0.1,
+    "max_weight": 0.9,
+    "use_outlier": true,
+    "equality_weight": 0.5,
+    "use_embeddings": true
+  },
+  "summary": {
+    "total_episodes": 1,
+    "correct_episodes": 0,
+    "accuracy": 0.0,
+    "timestamp": "2025-04-19T20:00:21.195313",
+    "run_time_seconds": 423.6301500797272
+  },
+  "history": [
+    {
+      "episode": 1,
+      "question": "In how many ways can $7$ people sit around a round table if no two of the $3$ people Pierre, Rosa, and Thomas can sit next to each other? (Seating arrangements which are rotations of each other are treated as the same.)",
+      "options": [
+        "144",
+        "180",
+        "128",
+        "156"
+      ],
+      "correct_answer": "A",
+      "rounds": [
+        {
+          "round": 1,
+          "time_taken": 5.402106523513794,
+          "reward": 0.19999999999999998,
+          "majority_answer": "C",
+          "is_correct": false,
+          "agent_answers": [
+            {
+              "agent_id": 0,
+              "answer": "C"
+            },
+            {
+              "agent_id": 1,
+              "answer": "C"
+            },
+            {
+              "agent_id": 2,
+              "answer": "C"
+            }
+          ],
+          "weight_matrix": [
+            [
+              0.3333333426051673,
+              0.33333331478966555,
+              0.3333333426051673
+            ],
+            [
+              0.33333332869741616,
+              0.333333356512919,
+              0.33333331478966477
+            ],
+            [
+              0.3333333472410844,
+              0.33333330551783125,
+              0.3333333472410844
+            ]
+          ],
+          "similarity_matrix": [
+            [
+              0.9999999403953552,
+              0.853956401348114,
+              0.9426584243774414
+            ],
+            [
+              0.853956401348114,
+              1.0,
+              0.8896358013153076
+            ],
+            [
+              0.9426584243774414,
+              0.8896358013153076,
+              1.0
+            ]
+          ]
+        },
+        {
+          "round": 2,
+          "time_taken": 5.4864654541015625,
+          "reward": 0.09999999999999998,
+          "majority_answer": "C",
+          "is_correct": false,
+          "agent_answers": [
+            {
+              "agent_id": 0,
+              "answer": "C"
+            },
+            {
+              "agent_id": 1,
+              "answer": "B"
+            },
+            {
+              "agent_id": 2,
+              "answer": "C"
+            }
+          ],
+          "weight_matrix": [
+            [
+              0.34994028888267914,
+              0.3141657115114842,
+              0.33589399960583677
+            ],
+            [
+              0.31829989444062323,
+              0.35454523816742584,
+              0.3271548673919509
+            ],
+            [
+              0.3329837345285987,
+              0.3201079420392779,
+              0.3469083234321234
+            ]
+          ],
+          "similarity_matrix": [
+            [
+              1.000000238418579,
+              0.4545072913169861,
+              0.9322350025177002
+            ],
+            [
+              0.4545072913169861,
+              1.0000001192092896,
+              0.3953302204608917
+            ],
+            [
+              0.9322350025177002,
+              0.3953302204608917,
+              1.0
+            ]
+          ]
+        },
+        {
+          "round": 3,
+          "time_taken": 5.083221673965454,
+          "reward": 0.09999999999999998,
+          "majority_answer": "D",
+          "is_correct": false,
+          "agent_answers": [
+            {
+              "agent_id": 0,
+              "answer": "D"
+            },
+            {
+              "agent_id": 1,
+              "answer": "C"
+            },
+            {
+              "agent_id": 2,
+              "answer": "D"
+            }
+          ],
+          "weight_matrix": [
+            [
+              0.38899613858657983,
+              0.24045994847320126,
+              0.37054391294021904
+            ],
+            [
+              0.281634231204443,
+              0.45560447437481666,
+              0.2627612944207404
+            ],
+            [
+              0.3766125559385267,
+              0.22802045816000846,
+              0.3953669859014648
+            ]
+          ],
+          "similarity_matrix": [
+            [
+              1.0000001192092896,
+              0.4276972711086273,
+              0.9741610288619995
+            ],
+            [
+              0.4276972711086273,
+              0.9999998807907104,
+              0.42150282859802246
+            ],
+            [
+              0.9741610288619995,
+              0.42150282859802246,
+              1.0000001192092896
+            ]
+          ]
+        }
+      ],
+      "total_reward": 0.3999999999999999,
+      "is_correct": false,
+      "time_taken": 24.172863483428955
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+[0;34m[INFO][0m 辩论环境运行开始时间: 2025-04-19 20:01:05
+[0;34m[INFO][0m 欢迎使用辩论环境一键运行脚本 (Qwen2.5-1.5B版本)
+[0;34m[INFO][0m 检查Python依赖...
+[0;32m[SUCCESS][0m 所有依赖都已安装
+[0;34m[INFO][0m 启动辩论环境...
+[0;34m[INFO][0m 使用配置:
+[0;34m[INFO][0m - 代理数量: 3
+[0;34m[INFO][0m - 辩论轮数: 5
+[0;34m[INFO][0m - 模型: /mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct
+[0;34m[INFO][0m - 设备: cuda
+[0;34m[INFO][0m - 回合数: 1
+[0;34m[INFO][0m - 初始信任阈值: 0.0
+[0;34m[INFO][0m - 最终信任阈值: 0.8
+[0;34m[INFO][0m - 其他超参数: 离群点阈值=0.5, 权重范围=[0.1,0.9], 平等权重=0.5
+
+===== 系统信息 =====
+主机名: is-dautmrc5qgvh7tol-devmachine-0
+操作系统: Linux-5.15.0-58-generic-x86_64-with-glibc2.31
+Python版本: 3.10.10
+PyTorch版本: 2.1.2+gitaf551ef
+CUDA可用: 是
+CUDA版本: 11.6
+GPU数量: 8
+GPU 0: Device 4001
+GPU 1: Device 4001
+GPU 2: Device 4001
+GPU 3: Device 4001
+GPU 4: Device 4001
+GPU 5: Device 4001
+GPU 6: Device 4001
+GPU 7: Device 4001
+==============================
+
+===== 运行参数 =====
+agents: 3
+debate_rounds: 5
+model: /mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct
+device: cuda
+episodes: 1
+base_threshold: 0.0
+final_threshold: 0.8
+outlier_threshold: 0.5
+min_weight: 0.1
+max_weight: 0.9
+use_outlier: True
+equality_weight: 0.5
+use_embeddings: True
+==============================
+
+Loading /mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct on cuda...
+Model loaded successfully.
+!!!!!!!!!!!!megablocks not available, using torch.matmul instead
+!!!!!!!!!!!!megablocks not available, using torch.matmul instead
+<All keys matched successfully>
+<All keys matched successfully>
+运行辩论环境...
+
+==== 回合 1/1 ====
+/opt/conda/envs/mars/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/opt/conda/envs/mars/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:567: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/opt/conda/envs/mars/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/opt/conda/envs/mars/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:572: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/opt/conda/envs/mars/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:589: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+/opt/conda/envs/mars/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:589: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+问题: In how many ways can $7$ people sit around a round table if no two of the $3$ people Pierre, Rosa, and Thomas can sit next to each other? (Seating arrangements which are rotations of each other are treated as the same.)
+选项: A) 144, B) 180, C) 128, D) 156
+正确答案: A
+初始回合观察到的矩阵形状: (3, 3)
+
+--- 辩论轮次 1 ---
+应用的权重矩阵:
+[[0.33 0.33 0.33]
+ [0.33 0.33 0.33]
+ [0.33 0.33 0.33]]
+奖励: 0.20
+主流答案: C
+是否正确: ✗
+当前答案: 智能体 0: C, 智能体 1: C, 智能体 2: C
+
+--- 辩论轮次 2 ---
+应用的权重矩阵:
+[[0.35 0.31 0.34]
+ [0.32 0.35 0.33]
+ [0.33 0.32 0.35]]
+奖励: 0.10
+主流答案: C
+是否正确: ✗
+当前答案: 智能体 0: C, 智能体 1: B, 智能体 2: C
+
+--- 辩论轮次 3 ---
+应用的权重矩阵:
+[[0.39 0.24 0.37]
+ [0.28 0.46 0.26]
+ [0.38 0.23 0.4 ]]
+奖励: 0.10
+主流答案: D
+是否正确: ✗
+当前答案: 智能体 0: D, 智能体 1: C, 智能体 2: D
+
+--- 辩论轮次 4 ---
+应用的权重矩阵:
+[[0.39 0.23 0.38]
+ [0.27 0.46 0.27]
+ [0.38 0.23 0.39]]
+奖励: -0.00
+主流答案: D
+是否正确: ✗
+当前答案: 智能体 0: D, 智能体 1: C, 智能体 2: B
+
+--- 辩论轮次 5 ---
+应用的权重矩阵:
+[[0.46 0.27 0.28]
+ [0.26 0.45 0.28]
+ [0.27 0.28 0.45]]
+奖励: 0.10
+主流答案: B
+是否正确: ✗
+当前答案: 智能体 0: C, 智能体 1: B, 智能体 2: B
+
+回合 1 完成，总奖励: 0.50
+最终主流答案: B, 正确答案: A
+结果: ✗ 错误
+
+详细结果已保存到: results/debate_results_20250419_200114.json
+[0;34m[INFO][0m 辩论环境运行结束时间: 2025-04-19 20:08:49
+[0;34m[INFO][0m 总运行时间: 0小时 7分钟 44秒
+[0;34m[INFO][0m 清理临时文件...
+[0;32m[SUCCESS][0m 辩论环境运行完成！
+[0;32m[SUCCESS][0m 日志文件: logs/debate_run_20250419_200105.log
+[0;32m[SUCCESS][0m 结果文件: results/debate_results_20250419_200105.json

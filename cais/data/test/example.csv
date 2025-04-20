@@ -1,0 +1,8 @@
+question,A,B,C,D,answer
+"In how many ways can $7$ people sit around a round table if no two of the $3$ people Pierre, Rosa, and Thomas can sit next to each other? (Seating arrangements which are rotations of each other are treated as the same.)",144,180,128,156,A
+"Janet 的鸭子每天产 16 个蛋。她每天早上吃掉 3 个做早餐，另外用 4 个烤松饼送给朋友。她把剩下的蛋拿到农贸市场卖，每个蛋卖 2 美元。她每天在市场上能赚多少钱？",$12,$16,$18,$20,C
+"What is the capital of France?",Paris,London,Berlin,Madrid,A
+"Which planet is closest to the Sun?",Earth,Venus,Mercury,Mars,C
+"What is 2+2?",3,4,5,6,B
+"Who wrote Romeo and Juliet?",Charles Dickens,William Shakespeare,Jane Austen,Mark Twain,B
+"What is the chemical symbol for gold?",Au,Ag,Fe,Cu,A

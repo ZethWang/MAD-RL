@@ -1,0 +1,151 @@
+[0;34m[INFO][0m 辩论环境运行开始时间: 2025-04-19 19:16:03
+[0;34m[INFO][0m 欢迎使用辩论环境一键运行脚本 (Qwen2.5-1.5B版本)
+[0;34m[INFO][0m 检查Python依赖...
+[0;32m[SUCCESS][0m 所有依赖都已安装
+[0;34m[INFO][0m 启动辩论环境...
+[0;34m[INFO][0m 使用配置:
+[0;34m[INFO][0m - 代理数量: 3
+[0;34m[INFO][0m - 辩论轮数: 3
+[0;34m[INFO][0m - 模型: /mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct
+[0;34m[INFO][0m - 设备: cuda
+[0;34m[INFO][0m - 回合数: 1
+[0;34m[INFO][0m - 初始信任阈值: 0.0
+[0;34m[INFO][0m - 最终信任阈值: 0.8
+[0;34m[INFO][0m - 其他超参数: 离群点阈值=0.5, 权重范围=[0.1,0.9], 平等权重=0.5
+
+===== 系统信息 =====
+主机名: is-dautmrc5qgvh7tol-devmachine-0
+操作系统: Linux-5.15.0-58-generic-x86_64-with-glibc2.31
+Python版本: 3.10.10
+PyTorch版本: 2.1.2+gitaf551ef
+CUDA可用: 是
+CUDA版本: 11.6
+GPU数量: 8
+GPU 0: Device 4001
+GPU 1: Device 4001
+GPU 2: Device 4001
+GPU 3: Device 4001
+GPU 4: Device 4001
+GPU 5: Device 4001
+GPU 6: Device 4001
+GPU 7: Device 4001
+==============================
+
+===== 运行参数 =====
+agents: 3
+debate_rounds: 3
+model: /mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct
+device: cuda
+episodes: 1
+base_threshold: 0.0
+final_threshold: 0.8
+outlier_threshold: 0.5
+min_weight: 0.1
+max_weight: 0.9
+use_outlier: True
+equality_weight: 0.5
+use_embeddings: True
+==============================
+
+Loading /mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars/ckpt/Qwen2.5-1.5B-Instruct on cuda...
+Model loaded successfully.
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars_2/run_temp.py", line 34, in <module>
+  File "/mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars_2/run_temp.py", line 34, in <module>
+        env = DebateEnv(env = DebateEnv(
+
+  File "/mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars_2/debate_gym_env.py", line 81, in __init__
+  File "/mnt/public/code/zzy/wzh/dynamic_train/dt-data/mars_2/debate_gym_env.py", line 81, in __init__
+        self.embedding_model = SentenceTransformer(self.embedding_model = SentenceTransformer(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/sentence_transformers/SentenceTransformer.py", line 302, in __init__
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/sentence_transformers/SentenceTransformer.py", line 302, in __init__
+        if is_sentence_transformer_model(if is_sentence_transformer_model(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/sentence_transformers/util.py", line 1400, in is_sentence_transformer_model
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/sentence_transformers/util.py", line 1400, in is_sentence_transformer_model
+        load_file_path(load_file_path(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/sentence_transformers/util.py", line 1440, in load_file_path
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/sentence_transformers/util.py", line 1440, in load_file_path
+        return hf_hub_download(return hf_hub_download(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+        return f(*args, **kwargs)return f(*args, **kwargs)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+        return fn(*args, **kwargs)return fn(*args, **kwargs)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1240, in hf_hub_download
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1240, in hf_hub_download
+        return _hf_hub_download_to_cache_dir(return _hf_hub_download_to_cache_dir(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1303, in _hf_hub_download_to_cache_dir
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1303, in _hf_hub_download_to_cache_dir
+        (url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error((url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1751, in _get_metadata_or_catch_error
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1751, in _get_metadata_or_catch_error
+        metadata = get_hf_file_metadata(metadata = get_hf_file_metadata(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+        return fn(*args, **kwargs)return fn(*args, **kwargs)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1673, in get_hf_file_metadata
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1673, in get_hf_file_metadata
+        r = _request_wrapper(r = _request_wrapper(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 376, in _request_wrapper
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 376, in _request_wrapper
+        response = _request_wrapper(response = _request_wrapper(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 399, in _request_wrapper
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 399, in _request_wrapper
+        response = get_session().request(method=method, url=url, **params)response = get_session().request(method=method, url=url, **params)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+        resp = self.send(prep, **send_kwargs)resp = self.send(prep, **send_kwargs)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+        r = adapter.send(request, **kwargs)r = adapter.send(request, **kwargs)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 66, in send
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 66, in send
+        return super().send(request, *args, **kwargs)return super().send(request, *args, **kwargs)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+        resp = conn.urlopen(resp = conn.urlopen(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+        response = self._make_request(response = self._make_request(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+        self._validate_conn(conn)self._validate_conn(conn)
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1095, in _validate_conn
+        conn.connect()conn.connect()
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connection.py", line 615, in connect
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connection.py", line 615, in connect
+        self.sock = sock = self._new_conn()self.sock = sock = self._new_conn()
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connection.py", line 196, in _new_conn
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/connection.py", line 196, in _new_conn
+        sock = connection.create_connection(sock = connection.create_connection(
+
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+  File "/opt/conda/envs/mars/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+        sock.connect(sa)sock.connect(sa)
+
+KeyboardInterruptKeyboardInterrupt
+
